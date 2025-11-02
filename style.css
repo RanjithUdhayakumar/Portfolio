@@ -314,3 +314,190 @@ footer {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ========================= */
+/* RESPONSIVE DESIGN SECTION */
+/* ========================= */
+
+/* ======= Tablets (≤992px) ======= */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-image .inner-circle img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* ======= Mobile (≤768px) ======= */
+@media (max-width: 768px) {
+
+  /* NAVBAR ALIGNMENT */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0.8rem 0;
+  }
+
+  /* MENU TOGGLE LEFT */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #007bff;
+    cursor: pointer;
+    order: 1;
+  }
+
+  .menu-toggle:hover {
+    color: #0056b3;
+  }
+
+  /* LOGO CENTER */
+  .logo {
+    order: 2;
+    text-align: center;
+    flex: 1;
+    font-size: 1.5rem;
+  }
+
+  /* NAV LINKS HIDDEN INITIALLY */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 2px solid #007bff;
+    padding: 1.5rem 0;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  /* ACTIVE STATE */
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* HAMBURGER ROTATE ANIMATION */
+  .menu-toggle.active i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Maintain space between navbar and hero */
+  .hero {
+    padding-top: 100px;
+  }
+
+  /* HERO SECTION */
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .hero-image .inner-circle img {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* ABOUT SECTION */
+  .about {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* PROJECTS */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact-form {
+    width: 90%;
+  }
+}
+
+/* ======= Small Phones (≤480px) ======= */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .inner-circle img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
